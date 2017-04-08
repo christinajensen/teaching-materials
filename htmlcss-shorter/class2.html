@@ -1,0 +1,512 @@
+<!doctype html> 
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Class 2 ~ HTML/CSS 2-Day ~ Girl Develop It</title>
+
+    <meta name="description" content="An introduction to HTML & CSS presented in two, 6-hour sessions.">
+    <meta name="author" content="Girl Develop It San Francisco">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="../common/css/reveal.css">
+		<link rel="stylesheet" href="../common/css/theme/gdilight.css" id="theme">
+
+    <!--Adapting the 2-column style from national slides-->
+    <style>
+      .flex-container {
+        display: flex;
+      }
+      .flex-item {
+        flex-basis: 50%;
+      }
+    </style>
+
+		<!-- For syntax highlighting -->
+		<!-- light editor --><link rel="stylesheet" href="../common/lib/css/light.css">
+		<!-- dark editor<link rel="stylesheet" href="lib/css/dark.css"> -->
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="../common/css/print/pdf.css" type="text/css" media="print">
+		<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Intro to HTML/CSS</h1>
+          <h2>Class 2</h2>
+        </section>
+
+        <section>
+          <h3>Anatomy of a website</h3>
+          <pre style="font-size:.7em">
+            <strong>Content</strong>: Text, Media<br />
+            <strong>+  HTML</strong>: Structure + Semantics<br />
+            <strong>+   CSS</strong>: Presentation + Design<br />
+            <strong>+    JS</strong>: Interactivity<br />
+            <strong>= Your Website</strong>
+          </pre>
+          <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
+        </section>
+
+
+        <!-- What is CSS-->
+        <section>
+          <h3>CSS: What is it?</h3>
+          <p><strong>CSS</strong> = <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
+          <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
+          <p>CSS is works in conjunction with HTML, but is not HTML itself.</p>
+        </section>
+
+        <section>
+          <h3>CSS: What can it do?</h3>
+          <p>All colored text, position, and size</p>
+          <img src = "img/homepage-view.png" alt="Screenshot of homepage" height="400">
+          <p><small><a href="http://www.csszengarden.com/" target="_blank">More examples: CSS Zen Garden</a></small></p>
+
+          <aside class="notes">Open girldevelopit.com, delete CSS from it, show what happens</aside>
+        </section>
+
+        <!-- The CSS Rule-->
+        <section>
+          <h3>Anatomy of CSS</h3>
+ 	  <p>CSS consists of <strong>style rules</strong>. Each style rule consists of a <strong>selector</strong> and
+         <strong>declarations</strong> of <strong>property-value</strong> pairs:</p>
+	 <pre><code class="css">selector {
+  property: value;
+  property: value;
+}</code></pre>
+        <p>For example:</p>
+	<pre><code class="css">body {
+  color: yellow;
+  background-color: black;
+}</code></pre>
+        </section>
+
+        <!-- Embedded -->
+        <section>
+          <h3>Connecting CSS to HTML: Embedded</h3>
+<pre><code class = "html">&lt;head&gt;
+  &lt;style&gt;
+    p {
+      color: yellow;
+      background-color: black;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+          <ul>
+            <li>Inside <code>&lt;head&gt;</code> element.</li>
+            <li>Uses <code>&lt;style&gt;</code> tag.</li>
+            <li>Only applies to that page.</li>
+          </ul>
+        </section>
+
+        <!-- CSS Selector Intro -->
+        <section>
+          <h3>CSS: The Selector</h3>
+	  <pre><code class="css">selector {
+  property: value;
+  property: value;
+}</code></pre>
+	 <p>The selector is used to select which elements in the HTML page will be given the styles inside the curly braces.</p>
+
+        </section>
+
+        <!-- Selectors elements-->
+        <section>
+          <h3>Types of Selectors: Element</h3>
+<pre><code class="css">p {
+  property: value;
+}
+</code></pre>
+          <p>Selects all paragraph elements.</p>
+<pre><code class="css">img {
+  property: value;
+}
+</code></pre>
+          <p>Selects all image elements.</p>
+        </section>
+
+        <section>
+          <h3>Property: Color</h3>
+          <p>The <code>color</code> property changes the color of the text.</p>
+<pre><code class = "css">p {
+  color: red;
+}
+</code></pre>
+        </section>
+
+        <!-- Background color-->
+        <section>
+          <h3>Property: Background-color</h3>
+          <p>The <code>background-color</code> property changes the color of the background.</p>
+<pre><code class = "css">body {
+  background-color: hotpink;
+}
+</code></pre>
+        </section>
+
+        <!-- Color -->
+        <section>
+          <h3>CSS Color Values</h3>
+          <p>Your browser can accept colors in many different ways:</p>
+          <table style="margin: 0 auto;">
+            <tr>
+              <td><strong>Color name: </strong></td>
+              <td><code>red</code></td>
+            </tr>
+            <tr>
+              <td><strong>Hexadecimal value: </strong></td>
+              <td><code>#FF0000</code></td>
+            </tr>
+            <tr>
+              <td><strong>RGB value: </strong></td>
+              <td><code>rgb(255, 0, 0)</code></td>
+            </tr>
+            <tr>
+              <td><strong>RGBA value: </strong></td>
+              <td><code>rgba(255, 0, 0, .8)</code></td>
+            </tr>
+            <tr>
+              <td><strong>HSL value: </strong></td>
+              <td><code>hsl(0, 100%, 100%)</code></td>
+            </tr>
+          </table>
+          <hr>
+          <p><a href="http://www.w3schools.com/colors/colors_picker.asp" target="_blank">W3Schools Color Picker</a></p>
+          <p><a href="http://www.colors.commutercreative.com/grid/" target="_blank">CSS Color Names</a></p>
+        </section>
+
+	<!-- Chrome Dev Tools -->
+	<section>
+	  <h3>Using Chrome Dev Tools</h3>
+          <p>Easily try out new colors directly in the browser:</p>
+	  <img src="img/chromedevtools_color.png" alt="Screenshot of picking a new color using Chrome Dev Tools">
+          <p><small><a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-styles#color-picker" target="_blank">More reading: Chrome Dev Tools documentation</a>
+          </small></p>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ol>
+            <li>Add a <code>style</code> tag in the <code>head</code> of your page.</li>
+            <li>Add CSS rules to change the font color and background color of different types of elements- paragraphs, headings, lists.</li>
+          </ol>
+        </section>
+
+          <!-- Fonts-->
+        <section>
+          <h3>Property: Font-family</h3>
+          <p>The <code>font-family</code> property defines which font is used.</p>
+<pre><code class = "css">body {
+  font-family: "Times New Roman", serif;
+}</code></pre>
+<pre><code class="css">body {
+  font-family: "Arial", sans-serif;
+}
+</code></pre>
+          <p>The browser can only show fonts that exist on that computer. Always specify a generic family name last, so the browser has a backup.</p>
+        </section>
+
+        <!-- Font size -->
+        <section>
+          <h3>Property: Font-size</h3>
+          <p>The <code>font-size</code> property specifies the size of the font.</p>
+<pre><code class = "css">p {
+  font-size: 12px;
+  font-size: 1.5em;
+  font-size: 100%;
+}
+</code></pre>
+          <p>Pixels</p>
+          <p>"em"</p>
+          <p>Percentage</p>
+        </section>
+
+        <!-- Fonts-->
+        <section>
+          <h3>Font properties & shorthand</h3>
+<pre><code class = "css">p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+}
+</code></pre>
+          OR
+<pre><code class = "css">p {
+  font: italic bold 10px sans-serif;
+}
+</code></pre>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ol>
+            <li>Change the fonts of your page</li>
+            <li>Try changing the font sizes and styles for different elements, like paragraphs and headings.</li>
+            <li><em>Bonus:</em> Try using a <a href="https://fonts.google.com/" target="_blank">Google Web Font</a> on your page</li>
+          </ol>
+        </section>
+
+        <!-- Selector position-->
+        <section>
+            <h3>Types of Selectors: Position</h3>
+            <ul>
+              <li>Position selectors are more specific</li>
+              <li>They look for elements <em>inside</em> other elements</li>
+              <li>We separate nested elements with a space</li>
+            </ul>
+<pre><code class = "css">p em {
+  color: yellow;
+}
+</code></pre>
+          <p>Selects all <code>em</code> elements that are within a paragraph:</p>
+<pre><code class = "html">&lt;p&gt;This is &lt;em&gt;important.&lt;/em&gt;&lt;/p&gt; &lt;!-- This would be selected --&gt;
+
+&lt;h1&gt;This is &lt;em&gt;important.&lt;/em&gt;&lt;/h1&gt; &lt;!-- This would not! --&gt;
+</code></pre>
+        </section>
+        <section>
+          <h3>Selector: Position</h3>
+<pre><code class = "css">ul li a strong {
+  color: purple;
+}
+</code></pre>
+          <p> So what does that CSS mean? Fill in the blank:</p>
+          <p>"Find a ____inside a ___ inside a __ in an ___ list"</p>
+<pre><code class = "html">&lt;ul&gt;
+  &lt;li&gt;&lt;a href="programs.html"&gt;Our &lt;strong&gt;program&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+        </section>
+
+        <!-- Pseudo class-->
+        <!-- Hiding for now
+        <section>
+          <h3>Pseudo-classess</h3>
+          <p>Pseudo-classes can style elements based on their current state.</p>
+          <div class="flex-container">
+            <div class="flex-item">
+              <p>Syntax:</p>
+<pre><code class="css">selector:pseudo-class {
+  property: value;
+}
+</code></pre>
+            </div>
+            <div class="flex-item">
+              <p>Example:</p>
+<pre><code class="css">a:hover {
+  text-decoration: none;
+}
+</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Pseudo-classes</h3>
+<pre><code class="css">a:link  { color:#FF0000; } /* unvisited link */
+
+a:visited { color: green; } /* visited link */
+
+a:hover { color: purple; } /* moused over */
+
+a:focus { color: purple; } /* selected with keyboard*/
+
+a:active { color: blue; } /* activated link */
+</code></pre>
+          <p><small>
+          Note: <code>a:hover</code> <strong>MUST</strong> come after <code>a:link</code> and <code>a:visited</code> in the CSS to be effective
+          </small></p>
+        </section>
+
+        <section>
+         <h3>Grouping Selectors</h3>
+         <p>You can group selectors to apply the same style to all of the selectors by separating them with commas:</p>
+         <pre><code class="css">a:hover, a:focus {
+  color: purple;
+}</code></pre>
+        </section>
+        
+        <section>
+          <h3>Let's develop it</h3>
+          <ul>
+            <li>In your CSS file, make a new CSS rule using a position selector
+             <small>(remember, you need to look for an element <em>inside</em> another element)</small></li>
+            <li>Add a CSS rule to style your links using pseudo-classes</li>
+            <li>Bonus: Try grouping selectors for your links or headings</li>
+          </ul>
+        </section>
+        -->
+
+        <section>
+          <h3>Selector: <code>id</code></h3>
+<pre><code class = "css">#site-footer {
+  property: value;
+}
+</code></pre>
+          <p>Selects the one element on the page with an <code>id</code> of <code>site-footer</code>.</p>
+<pre><code class="html">&lt;p id="site-footer"&gt;Copyright 2016&lt;/p&gt;
+</code></pre>
+
+        </section>
+
+        <!-- Selectors Class-->
+        <section>
+          <h3>Selector: <code>class</code></h3>
+<pre><code class = "css">.warning {
+  color: red;
+}
+</code></pre>
+          <p>Selects all elements with a <code>class</code> of <code>warning</code>.</p>
+<pre><code class="html xml">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
+&lt;p class="warning"&gt;Thar be dragons!&lt;/p&gt;
+&lt;p&gt;Nothing to see here...&lt;/p&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>IDs vs. Classes</h3>
+          <p><strong><code>id</code></strong> -- Applies to <em>one</em> element on a webpage, i.e., a webpage only has one footer.<br />
+          In CSS, you mark an <code>id</code> selector with a "<code>#</code>".</p>
+          <hr>
+          <p><strong><code>class</code></strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.<br />
+          In CSS, you mark a <code>class</code> selector with a "<code>.</code>".</p>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's develop it</h3>
+          <ol>
+            <li>Add an <code>id</code> to a tag in your HTML.</li>
+            <li>Add a CSS rule to style that element.</li>
+            <li>Add a <code>class</code> to multiple tags in your HTML.</li>
+            <li>Add a CSS rule to style those elements.</li>
+            <li><em>Bonus</em>: Add a CSS rule with a position selector (to find elements inside other elements).</li>
+          </ol>
+        </section>
+
+        <!-- Find more selectors -->
+        <section>
+          <h3>More CSS Selectors</h3>
+          <p>There are many more ways to select elements in different ways. Read more:</p>
+          <ul>
+            <li><a href="https://css-tricks.com/how-css-selectors-work/" target="_blank">CSS Tricks</a></li>
+            <li><a href="http://learn.shayhowe.com/advanced-html-css/complex-selectors/#common-selectors" target="_blank">Advanced - Common Selectors</a></li>
+            <li><a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3 Schools - CSS Selectors</a></li>
+          </ul>
+        </section>
+
+        <!-- Properties-->
+        <section>
+          <h3>More CSS Properties</h3>
+          <p>Many CSS properties have self-explanatory names:</p>
+          <ul>
+            <li>background-color</li>
+            <li>font-family</li>
+            <li>font-size</li>
+            <li>color</li>
+            <li>width</li>
+            <li>height</li>
+          </ul>
+          <p>Find more at: <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference" target="_blank">MDN: All CSS properties</a></p>
+        </section>
+        
+<!-- Connecting HTML to CSS-->
+        <section>
+          <h3>Connecting CSS to HTML</h3>
+          <p class = "green">3 ways</p>
+          <p>"Inline"</p>
+          <p>"Embedded"</p>
+          <p>"External"</p>
+        </section>
+
+        <!-- Inline -->
+        <section>
+          <h3>Connecting CSS to HTML: Inline</h3>
+<pre><code class = "html">&lt;p style="color:red"&gt;Some text.&lt;/p&gt;
+</code></pre>
+          <ul>
+            <li>Uses the HTML <code>style</code> attribute.</li>
+            <li>Only applies to one element at a time.</li>
+            <li>Not preferred.</li>
+          </ul>
+        </section>
+
+       <!-- External-->
+        <section>
+          <h3>Connecting CSS to HTML: External</h3>
+<pre><code class = "html">&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+</code></pre>
+          <ul>
+            <li>Can be referenced from multiple pages.</li>
+            <li>Reduced file size &amp; bandwidth.</li>
+            <li>Easier to maintain in larger projects.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+          <br>
+          <br>
+          <p><a href="index.html#/1">Return to Table of Contents</a></p>
+        </section>
+
+      </div><!-- Close slides -->
+
+      <footer>
+        <div class="copyright">
+          Intro to HTML & CSS (2-day) -- Girl Develop It San Francisco --
+          <a rel="license" href="../common/http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div><!-- Close reveal -->
+
+    <script src="../common/lib/js/head.min.js"></script>
+    <script src="../common/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          //{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../common/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../common/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../common/plugin/zoom-js/zoom.js', async: true },
+          { src: '../common/plugin/notes/notes.js', async: true },
+          //{ src: '../common/plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

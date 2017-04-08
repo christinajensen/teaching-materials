@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to HTML/CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../common/bootstrap.css" rel="stylesheet"/>
+    <style type="text/css">
+.for-teachers {
+  display: none;
+    }</style>
+    <script>
+var showTeachers = function() {
+  var forTeachers = document.querySelectorAll(".for-teachers");
+  for (var i = 0; i < forTeachers.length; i++) {
+    forTeachers[i].style.display = "block";
+  }
+}</script>
+  </head>
+  <body>
+
+  <div class="container">
+
+  <h1 class="page-header">Intro to HTML/CSS</h1>
+
+  <div class="for-teachers">
+  <h3>Overview</h3>
+  <p>
+  This course gives an overview of HTML &amp; CSS, with some mention of newer HTML5 elements. It is designed to be given over 2 days,
+  but it can be split over 4 evenings as well.
+  </p>
+
+  <h3>Prerequisite</h3>
+  <p>Students should be familiar with the web as a user, but do not need to have any programming or markup language experience.</p>
+
+  <h3>Materials</h3>    
+    <p>Each lesson includes:</p>
+
+     <ul>
+      <li><b>Slides</b>: An HTML5-based slideset (<em>not</em> a PowerPoint) which embeds the actual HTML tags being described in order to better demonstrate them.
+      <li><strong>Handout</strong>: A PDF one-pager with a summary of the HTML/CSS for that lesson. Edit the originals in instructor-resources folder.
+      <li><strong>Sample code</strong>: An HTML file (or multiple) that demonstrate the teaching points. You may want to build up the file during class to demonstrate, or build up the attached CSS, depending on which lesson you're teaching. Students can download a zip, you can edit the originals in instructor-resources folder. 
+     </ul>
+  </div>
+
+   <section>
+          <ul>
+            <li><a target="_blank" href="class1.html">HTML Elements</a></li>
+            <li><a target="_blank" href="class2.html">CSS Selectors & Properties</a></li>
+            <li><a target="_blank" href="class3.html">HTML Grouping Elements & CSS Box Model</a></li>
+            <li><a target="_blank" href="class4.html">CSS Positioning & Layout</a></li>
+          </ul>
+    </section>
+
+
+  </body>
+</html>
